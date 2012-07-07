@@ -1,9 +1,36 @@
 body {
 	background-color: #e8d6e3;
+	background-image: url(map-repeat.jpg);
+	background-size: 480px 480px;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/* Box model hack, keep child margins inside */
+	border-top: 1px transparent solid;
+	margin-top: -1px;
+}
+
+a {
+	text-decoration: none;
+	color: #662d91;
+	font-weight: 400;
+}
+a:hover {
+	text-decoration: underline;
 }
 
 .logo {
 	text-align: center;
+	margin: 10px 0;
+}
+.logo img {
+	-moz-border-radius: 119px;
+	-o-border-radius: 119px;
+	border-radius: 119px;
+	box-shadow: 0 0px 8px #000;
+	width: 238px;
+	height: 238px;
 }
 
 h1, h2 {
@@ -27,26 +54,46 @@ ul.menu li.break {
 	display: block;
 }
 
-.program-slider {
+/**
+ * Pages
+ */
+.page, ul.menu {
+	display: block;
 	position: relative;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin: 0 10px 10px;
+	padding: 10px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px #999;
+}
+
+/** 
+ * Interactive elements
+ */
+.program-wrapper {
+	margin: 4px -21px;
+	position: relative;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+.program-slider {
+	overflow: hidden;
+	width: 1370px; /* 274px each */
 }
 
 .js .program-slider .day {
-	position: absolute;
-	width: 80%;
-	left: -90%;
-	top: 0;
+	padding: 10px 0 10px 30px;
+	float:left;
 	border-top: 1px solid transparent;
-}
-
-.js .program-slider .day.active {
-	position: static;
-	margin-left: 10%;
-}
-
-.js .program-slider .day.active + .day {
-	position: absolute;
-	left: 90%;
+	margin: 5px 7px 5px 5px;
+	
+	border: 1px solid #eee;
+	box-shadow: 0 0 5px #ccc;
+	background: #fff;
+	background-image: url(paper.jpg);
+	background-position: -50px -18px;
+	width: 230px;
 }
 
 /** 
@@ -63,7 +110,27 @@ ul.menu li.break {
     font-style: normal;
 }
 
-body {font: 12pt/13pt Arial, sans-serif;}
+body {font: 10pt/13pt Verdana, Arial, sans-serif;}
 h1 {font: 40pt/50pt 'GoodFootRegular', Arial, sans-serif;letter-spacing: 0;}
 h2 {font: 24pt/26pt 'GoodFootRegular', Arial, sans-serif;letter-spacing: 0;}
 .fontface {font: 18pt/20pt 'GoodFootRegular', Arial, sans-serif;}
+.program-slider {font: 15pt/14pt 'GoodFootRegular', Arial, sans-serif;letter-spacing: 0;}
+
+/**
+ * Fonts are to big on iPhone screen, back-button overflows
+ */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+	h1 {font-size: 33pt;}
+	h1 a {font-size: .5em;}
+	h2 {font-size: 22pt;}
+}
+
+/**
+ * HiRes images for Retina display's
+ */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+	body {
+		background-image: url(map-repeat_2x.jpg);
+		background-size: 480px 480px;
+	}
+}
