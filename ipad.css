@@ -1,14 +1,156 @@
 /**
  * Load larger background
  */
-@media only screen and (min-width: 481px){
-	body {
-		background-image: url(map-repeat_2x.jpg);
-		background-repeat: no-repeat;
-		background-color: red;
-	}
+html { height: 100%; }
+body {
+	background-image: url(map-repeat_2x.jpg);
+	padding: 0px;
+	height: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-	body { background: blue; }
+.wrapper { 
+	max-width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+	
+.page, #logo {
+	float: left;
+}
+#menu {
+	display: none;
+}
+	
+.pages {
+	clear: both;
+}
+
+.day + .day {
+	display: none;
+}
+
+a[name='top'] {
+	display: none;
+}
+
+/** 
+ * Interactive elements
+ */
+.program {
+	top: 300px;
+	left: 5%;
+	position: absolute;
+	overflow-y: hidden;
+	overflow-x: auto;
+	background-image: url(paper.jpg);
+	width: 300px;
+	height: 400px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, .4);
+	padding: 10px 0 10px 30px;
+	-webkit-transform: rotateZ(-5deg);
+}
+.program-slider {
+	overflow: hidden;
+	width: 1370px; /* 274px each */
+}
+.program-slider .day {
+	float:left;
+	border-top: 1px solid transparent;
+	margin: 5px 7px 5px 5px;
+	
+	background-position: -50px -18px;
+	width: 230px;
+}
+
+/**
+ * Post card
+ */
+.members {
+	background: url(postcard.png);
+	width: 447px;
+	height: 266px;
+	border:1px solid #aaa;
+	box-shadow: 5px 5px 15px rgba(0,0,0,.4);
+	-webkit-transform: rotate(3deg);
+	-webkit-transition: -webkit-transform .2s ease-in;
+	border-radius: 15px;
+	position: absolute;
+	bottom: 15%;
+	right: 0;
+}
+.members:hover {
+	-webkit-transform: scale(1.1) rotate(2deg);
+}
+.members h1 {
+	margin: 117px 70px 0 250px;
+	font-size: 30pt;
+	line-height: 40px;
+	text-align: center;
+	color: #333;
+	font-family: 'jrhandRegular';
+}
+
+/**
+ * Polaroid
+ */
+.photo {
+	background: white;
+	display: inline;
+	float: left;
+	margin: 0 0 27px 30px;
+	width: auto;
+	padding: 10px 10px 15px;
+	text-align: center;
+	font-family: "Marker Felt", sans-serif;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	-webkit-box-shadow: 0 3px 6px 
+	rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-webkit-transform: rotate(6deg);
+	-webkit-transition: -webkit-transform .15s linear;
+	-moz-transform: rotate(6deg);
+	
+	position: absolute;
+	right: 5%;
+	top: 10%;
+}
+.photo h1 {
+	font-family: 'jrhandRegular';
+}
+.photo img {
+	width: 250px;
+	height: 170px;
+}
+
+/**
+ * Why
+ */
+.why h1 {
+	color: #293181;
+	background: url(arrow.png) no-repeat;
+	background-size: 66px 76px;
+	padding: 60px 0 0 25px;
+	min-width: 70px;
+	position: absolute;
+	top: 100px;
+	left: 250px;
+	font-size: 50pt;
+}
+
+/**
+ * Address
+ */
+.address a {
+	display: block;
+	position: absolute;
+	left: 40%;
+	top: 20%;
+	font-size: 50pt;
+	line-height: 50pt;
+	font-family: 'GoodFootRegular';
+	color: #293181;
+	-webkit-transform: rotate(-5deg);
 }

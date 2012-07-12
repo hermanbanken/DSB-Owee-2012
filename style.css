@@ -54,48 +54,6 @@ ul.menu li.break {
 	display: block;
 }
 
-/**
- * Pages
- */
-.page, ul.menu {
-	display: block;
-	position: relative;
-	border: 1px solid #ccc;
-	background: #fff;
-	margin: 0 10px 10px;
-	padding: 10px;
-	border-radius: 4px;
-	box-shadow: 0 1px 3px #999;
-}
-
-/** 
- * Interactive elements
- */
-.program-wrapper {
-	margin: 4px -21px;
-	position: relative;
-	overflow-y: hidden;
-	overflow-x: auto;
-}
-.program-slider {
-	overflow: hidden;
-	width: 1370px; /* 274px each */
-}
-
-.js .program-slider .day {
-	padding: 10px 0 10px 30px;
-	float:left;
-	border-top: 1px solid transparent;
-	margin: 5px 7px 5px 5px;
-	
-	border: 1px solid #eee;
-	box-shadow: 0 0 5px #ccc;
-	background: #fff;
-	background-image: url(paper.jpg);
-	background-position: -50px -18px;
-	width: 230px;
-}
-
 /** 
  * Font's
  */
@@ -109,12 +67,22 @@ ul.menu li.break {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'jrhandRegular';
+    src: url('Jr-Hand-fontfacekit/jrhand-webfont.eot');
+    src: url('Jr-Hand-fontfacekit/jrhand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Jr-Hand-fontfacekit/jrhand-webfont.woff') format('woff'),
+         url('Jr-Hand-fontfacekit/jrhand-webfont.ttf') format('truetype'),
+         url('Jr-Hand-fontfacekit/jrhand-webfont.svg#jrhandRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {font: 10pt/13pt Verdana, Arial, sans-serif;}
 h1 {font: 40pt/50pt 'GoodFootRegular', Arial, sans-serif;letter-spacing: 0;}
 h2 {font: 24pt/26pt 'GoodFootRegular', Arial, sans-serif;letter-spacing: 0;}
-.fontface {font: 18pt/20pt 'GoodFootRegular', Arial, sans-serif;}
-.program-slider {font: 15pt/14pt 'GoodFootRegular', Arial, sans-serif;letter-spacing: 0;}
+.fontface {font: 18pt/20pt 'jrhandRegular', Arial, sans-serif;}
+.program-slider {font: 15pt/14pt 'jrhandRegular', Arial, sans-serif;letter-spacing: 0;}
 
 /**
  * Fonts are to big on iPhone screen, back-button overflows

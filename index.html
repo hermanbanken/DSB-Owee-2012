@@ -8,18 +8,20 @@
 	<script src="modernizr.custom.06046.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="reset.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="stylesheet" type="text/css" href="ipad.css" />
+	<link rel="stylesheet" type="text/css" href="phone.css" media="screen and (max-width: 600px)" />
+	<link rel="stylesheet" type="text/css" href="ipad.css" media="screen and (min-width: 601px)"/>
 </head>
 <body id="top">
+	<div class="wrapper">
 	<div id="logo" class='logo'>
 		<a href="#top" title="Delftsche Studenten Bond"><img class='hires' alt="DSB neemt je mee" src="logo.png" /></a>
 	</div>
 	<ul class='menu' id="menu">
 		<li><a href="#program">Programma</a></li>
-		<li><a href="#why">Waarom DSB?</a></li>
+		<li><a href="#why">DSB</a></li>
+		<li><a href="#members">Verhalen van Leden</a></li>
 		<li class='break'></li>
 		<li><a href="#photo">Foto's</a></li>
-		<li><a href="#car">Win een auto</a></li>
 		<li><a href="#contact">Contact</a></li>
 	</ul>
 	<div class='pages'>
@@ -99,13 +101,14 @@
 			</div></div>
 		</div>
 		<div class='page why'>
-			<h1 id="why">Waarom DSB? <a name="top" href="#top">terug</a></h1>
+			<h1 id="why">Info <a name="top" href="#top">terug</a></h1>
+		</div>
+		<div class='page members'>
+			<h1 id="members">Verhalen van Leden <a name="top" href="#top">terug</a></h1>
 		</div>
 		<div class='page photo'>
 			<h1 id="photo">Foto's <a name="top" href="#top">terug</a></h1>
-		</div>
-		<div class='page car'>
-			<h1 id="car">Win een auto <a name="top" href="#top">terug</a></h1>
+			<p><img src="" /></p>
 		</div>
 		<div class='page contact'>
 			<h1 id="contact">Contact <a name="top" href="#top">terug</a></h1>
@@ -117,6 +120,7 @@
 	</div>
 	<div class='background'>
 	</div>
+</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="dsb.js"></script>
 </body>
